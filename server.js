@@ -2,6 +2,7 @@ var path = require("path");
 var express = require("express");
 var cors = require("cors");
 var axios = require("axios");
+require("dotenv").config();
 const yelp = require("yelp-fusion");
 const fetch = require("node-fetch");
 const { URL } = require("url");
@@ -18,15 +19,14 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 // http://localhost:3000/asd?latitude=40.712775&longitude=-74.005973
-app.get("/asd", function(req, res) {
+app.get("/uber", function(req, res) {
   console.log(req.query);
   //  console.log(req.params);
 
   const headers = {
     "Content-Type": "text/xml",
-    Authorization: `Token ${}`
+    Authorization: `Token ${process.env.UBER_TOKEN}`
   };
 
   const options = {
