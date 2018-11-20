@@ -3,7 +3,6 @@ var express = require("express");
 var cors = require("cors");
 var axios = require("axios");
 require("dotenv").config();
-const yelp = require("yelp-fusion");
 const fetch = require("node-fetch");
 const { URL } = require("url");
 const uberURL = "https://api.uber.com/v1.2/estimates/price";
