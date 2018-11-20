@@ -18,6 +18,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+
 // http://localhost:3000/asd?latitude=40.712775&longitude=-74.005973
 app.get("/asd", function(req, res) {
   console.log(req.query);
@@ -25,7 +26,7 @@ app.get("/asd", function(req, res) {
 
   const headers = {
     "Content-Type": "text/xml",
-    Authorization: "Token KeQZeCbDywxkCjWZ43R1fwfWYcOFZPOGKLdvJiN7"
+    Authorization: `Token ${}`
   };
 
   const options = {
