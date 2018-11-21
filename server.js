@@ -43,7 +43,7 @@ app.get("/uber", function(req, res) {
     .then(response => response.json())
     .then(response => {
       console.log(response);
-      res.send(response);
+      res.json(response);
     })
     .catch(e => {
       console.log(e);
